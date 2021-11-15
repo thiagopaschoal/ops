@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    volumes:
+      - /Users/macbook/Dev/volumes/jenkins_home:/var/jenkins_home
+    ports:
+      - "8082:8080"
+      - "50000:50000"
+networks:
+  postgres-net:
+    driver: bridge

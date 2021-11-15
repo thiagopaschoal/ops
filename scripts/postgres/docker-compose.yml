@@ -1,0 +1,19 @@
+version: "3.4"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: pg
+    restart: always
+    environment:
+      POSTGRES_DB: dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - /Users/macbook/Dev/volumes/postgres:/var/lib/postgresql/data
+    networks:
+      - postgres-net
+networks:
+  postgres-net:
+    driver: bridge
