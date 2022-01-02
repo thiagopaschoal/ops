@@ -5,7 +5,7 @@ services:
     container_name: pg
     restart: always
     environment:
-      POSTGRES_DB: dev
+      POSTGRES_DB: api-cdc
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
