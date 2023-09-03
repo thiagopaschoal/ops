@@ -5,13 +5,13 @@ services:
     container_name: pg
     restart: always
     environment:
-      POSTGRES_DB: api-cdc
+      POSTGRES_DB: api-db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5433:5432"
     volumes:
-      - /Users/macbook/Dev/volumes/postgres:/var/lib/postgresql/data
+      - /home/thiagopaschoal/Dev/projetos/infra/volumes/postgres:/var/lib/postgresql/data
     networks:
       - postgres-net
 networks:
